@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleCalculator.View.CalculatorView">
+  <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+    <StackLayout Orientation="Horizontal">
+      <Editor Text="{Binding First, Mode=TwoWay}" />
+      <Label Text="+" FontSize="30" />
+      <Editor Text="{Binding Second, Mode=TwoWay}" />
+      <Label Text="=" FontSize="30" />
+      <Label Text="{Binding Answer, Mode=OneWay}" FontSize="30" />
+    </StackLayout>
+    <Button Text="{Binding Calculate.commandName}" Command="{Binding Calculate}" />
+    <Button Text="{Binding Clear.commandName}" Command="{Binding Clear}" />
+    <Button Text="{Binding Color}" />
+  </StackLayout>
+</ContentPage>
